@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
     margin:30px;
     display:flex;
     justify-content:space-around;
+    background-color:#FAEDCC;
+    border-radius: 10px;
     >div {
       width:100%;
       margin:30px;

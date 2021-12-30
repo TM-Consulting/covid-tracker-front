@@ -26,6 +26,7 @@ const FilterContainer = () => {
         break;
       case "country":
         dispatch(setCountry(value));
+        dispatch(setCity(""));
         break;
       default:
         break;

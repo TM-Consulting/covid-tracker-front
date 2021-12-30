@@ -8,7 +8,7 @@ const selectChartsDomain = (globalState: GlobalState): ChartsState =>
 
 const makeSelectChartsData = () =>
   createSelector(selectChartsDomain, (chartsState: ChartsState) =>
-    _.get(chartsState, "data", null)
+    _.get(chartsState, "data.data", null)
   );
 
 const makeSelectChartsError = () =>

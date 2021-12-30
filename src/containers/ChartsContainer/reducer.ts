@@ -1,10 +1,9 @@
-import { mockedData } from "../../utils/constants";
 import { Action } from "../../utils/types";
 import { ActionTypes } from "./constants";
 import { ChartsState } from "./types";
 
 const initialState: ChartsState = {
-  data: mockedData,
+  data: null,
   error: false,
 };
 const ChartsReducer = (state = initialState, action: Action) => {
@@ -13,6 +12,7 @@ const ChartsReducer = (state = initialState, action: Action) => {
       return {
         ...state,
         data: action.payload,
+        error: false,
       };
     case ActionTypes.REQUEST_ALL_CHARTS_DATA_ERROR:
       return {
