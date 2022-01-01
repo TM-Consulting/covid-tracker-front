@@ -22,8 +22,10 @@ const CustomDropDown = ({
           label={label}
           onChange={(e) => onChange(e.target.value, id)}
         >
-          {options.map((item) => (
-            <MenuItem value={item.value}>{item.label}</MenuItem>
+          {options.map((item, index) => (
+            <MenuItem key={index} value={item.value}>
+              {item.label}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

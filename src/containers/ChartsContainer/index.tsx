@@ -16,6 +16,7 @@ const ChartsContainer = () => {
 
   return (
     <div className="charts">
+      {console.log("testtt", chartsData)}
       {error ? (
         <CustomAlert {...alertError} />
       ) : (
