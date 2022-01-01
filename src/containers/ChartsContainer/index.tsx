@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import CustomAlert from "../../components/CustomAlert";
 import CustomLineChart from "../../components/CustomLineChart";
+import { alertError } from "./constants";
 import { makeSelectChartsData, makeSelectChartsError } from "./selectors";
 import { ChartsData } from "./types";
 
@@ -11,15 +13,18 @@ const chartsState = createStructuredSelector({
 });
 const ChartsContainer = () => {
   const { chartsData, error } = useSelector(chartsState);
-  const dispatch = useDispatch();
 
   return (
     <div className="charts">
-      {chartsData &&
+      {error ? (
+        <CustomAlert {...alertError} />
+      ) : (
+        chartsData &&
         chartsData?.length > 0 &&
         chartsData.map((item: ChartsData, index: number) => (
           <CustomLineChart key={index} {...item} />
-        ))}
+        ))
+      )}
     </div>
   );
 };

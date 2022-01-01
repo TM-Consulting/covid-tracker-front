@@ -11,9 +11,12 @@ const GlobalStyle = createGlobalStyle`
       display:flex;
       flex-wrap:wrap;
       justify-content:space-around;
+      margin:10px auto;
+      width:80%;
   }
   .filters{ 
-    margin:30px;
+    margin:10px auto;
+    width:70%;
     display:flex;
     justify-content:space-around;
     background-color:#FAEDCC;
@@ -22,6 +25,14 @@ const GlobalStyle = createGlobalStyle`
       width:100%;
       margin:30px;
     }
+  }
+
+  .statistics{
+    margin:10px auto;
+    width:70%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
   }
 `;
 

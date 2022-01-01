@@ -3,4 +3,8 @@ enum ActionTypes {
   REQUEST_ALL_CHARTS_DATA_ERROR = "covid/tracker/greentec-capital/REQUEST_ALL_CHARTS_DATA_ERROR",
 }
 
-export { ActionTypes };
+const alertError = {
+  type: "error",
+  message: "Error loading charts",
+};
+export { ActionTypes, alertError };

@@ -30,7 +30,7 @@ const CustomLineChart = ({
           bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
+        <CartesianGrid strokeDasharray="12 12" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
@@ -39,7 +39,7 @@ const CustomLineChart = ({
           type="monotone"
           dataKey={lineDataKey}
           stroke="#8884d8"
-          activeDot={{ r: 8 }}
+          activeDot={{ r: 12 }}
         />
       </LineChart>
     </CustomLineChartWrapper>
